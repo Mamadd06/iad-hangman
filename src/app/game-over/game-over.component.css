@@ -1,0 +1,24 @@
+.modal-body {
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.modal-content {
+    width: 600px;
+    height: 600px;
+}
+
+.div-word {
+    margin-top: 212px;
+    text-align: center;
+    color: #FFF;
+}
+
+.div-word > div > span {
+    font-size: 50px;
+}
+
+.div-label {
+    margin-top: 30px;
+}

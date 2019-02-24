@@ -1,0 +1,21 @@
+
+<!-- Modal transparent -->
+<div class="modal modal-transparent fade" id="modal-transparent" tabindex="-1" 
+  role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+  [ngClass]="{'in': isAnimate}"
+  [ngStyle]="{'display': showModal ? 'block' : 'none', 'opacity': isAnimate ? 1 : 0}">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body" [ngStyle]="{'background-image': 'url(/assets/images/' + bgImg + ')'}">
+            <button type="button" (click)="hide()" class="close" data-dismiss="modal">
+              <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            
+                <div class="row div-word">
+                  <div class="col-md-3 div-label"> <i>Mot demandé: </i> </div>  
+                  <div class="col-md-4"><span>{{word}}</span></div>  
+                </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
