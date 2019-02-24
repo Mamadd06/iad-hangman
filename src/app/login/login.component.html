@@ -1,3 +1,22 @@
-<p>
-  login works!
-</p>
+<div  class="modal modal-transparent fade" tabindex="-1" [ngClass]="{'in': isAnimate}"
+       [ngStyle]="{'display': showModal ? 'block' : 'none', 'opacity': isAnimate ? 1 : 0}">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>IAD France:  Le jeu du pendu</h3>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input class="form-control input-lg" type="text" id="pseudo" name="pseudo" [(ngModel)]="pseudo"
+                placeholder="Inscris ton pseudo avant de commencer" required #pseudoForm="ngModel">
+            </div>
+            <div class="form-group modal-body-valid-div">
+                <button type="button" [disabled]="pseudoForm.invalid"  class="btn btn-primary pull-right" (click)="savePseudo()">Valider</button>
+            </div>
+          </form>
+          {{form}}
+        </div>
+      </div>
+    </div>
+  </div>

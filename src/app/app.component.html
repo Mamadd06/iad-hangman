@@ -1,0 +1,42 @@
+<app-login (loggedIn)="getPseudo($event)" *ngIf="!username"></app-login>
+
+
+<div *ngIf="username" class="container">
+      <div class="row">
+        <div class="col-md-7">
+            <div class="row pull-right"> <span> <i> Bienvenue <b> {{username | uppercase }} </b> dans le jeu du pendu!</i></span> </div>
+            <div class="row message-div">
+                <table class="table table-bordered secret-table">
+                  <tr class="info">
+                    <td *ngFor="let word of secretWord">
+                        <span *ngIf="!word.isGuess"><i class="material-icons">grade</i></span>
+                        <span *ngIf="word.isGuess"> <b> {{word.value | uppercase }} </b></span>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+            
+            <div class="row message-div bg-danger"> 
+                <p class="">Il vous reste {{nbEssais}} essais</p>
+            </div>
+
+            <div class="row message-div">
+             <div class="letters">
+                <ul class="list-inline" *ngFor="let items of letters">
+                  <li *ngFor="let item of items">
+                    <button class="btn btn-primary letter-button"
+                            [disabled]="item.isGuess"
+                            (click)="try(item);">{{item.value | uppercase }}</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <!-- assets/images/Hangman-0.png -->
+        <div class="col-md-4 well well-lg pendu">
+          <app-pendu [src]="srcImage"></app-pendu>
+        </div>
+      </div>
+</div>
+
+<app-game-over (retry)="initGame()" [gameOverResult]="gameOver" *ngIf="gameOver.value"></app-game-over>

@@ -1,0 +1,50 @@
+.container {
+    background-color: #fff;
+    width: 80%;
+    /* height: 100%; */
+    height: 100vh;
+    float: none;
+    margin: 0 auto;
+    padding: 30px;
+    /* padding-left: 30px; */
+}
+
+.secret-table {
+    margin-top: 30px;
+}
+.secret-table>tbody>tr>td {
+    height: 35px;
+    border: 1px solid #928282;
+    text-align: center;
+}
+
+.message-div {
+    margin-top: 50px;
+    text-align: center;
+    padding-top: 11px;
+}
+
+.secretWord {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 3rem;
+  }
+  
+.letter-button:disabled {
+    opacity: 0.5;
+    color: black;
+  }
+
+li {
+    padding-right: 30px;
+}
+
+.letter-button {
+    width: 50px;
+}
+
+.pendu {
+    margin-left: 50px;
+    height: 490px;
+    padding-top: 135px;
+}
