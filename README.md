@@ -6,9 +6,42 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Prerequisites
+Make sure you have installed all of the following prerequisites on your development machine:
+* Git - [Download & Install Git](https://git-scm.com/downloads). OSX and Linux machines typically have this already installed.
+* Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
+* Angular CLI - [Install Angular CLI](https://cli.angular.io/).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Downloading IAD Hangman
+There are several ways you can get the IAD Hangman:
+
+### Cloning The Gitlab Repository
+The recommended way to get IAD Hangman is to use git to directly clone the IAD Hangman repository:
+
+```bash
+$ git clone https://github.com/Mamadd06/iad-hangman.git
+```
+
+This will clone the latest develop version of the FactDiv repository to a **IAD Hangman** folder.
+
+## Quick Install
+Once you've downloaded the IAD Hangman and installed all the prerequisites, you're just a few steps away from starting to development.
+
+The IAD Hangman comes pre-bundled with a `package.json` file that contain the list of modules you need to start your application.
+
+To install the dependencies, run this in the application folder from the command-line:
+
+```bash
+$ npm install
+```
+
+## Running Your Application
+
+Run your application using angular CLI:
+
+```bash
+$ ng serve
+```
 
 ## Build
 
