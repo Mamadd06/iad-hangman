@@ -23,11 +23,14 @@ export class GameOverComponent implements OnInit {
   ngOnInit() {
     this.showModal = true;
     setTimeout(() => this.isAnimate = true, 100);
-    console.log('gameOver=====dans GO=======>', this.gameOverResult);
     this.bgImg = this.gameOverResult.isAllGuessed ? 'winnner.gif' : 'loser-1.gif';
     this.word = this.getWord();
   }
 
+  /**
+   * fermer le modal quand on clique le container
+   * @param event 
+   */
   public hideModelByClickedContainer(event: MouseEvent): void {
     if ((<HTMLElement>event.target).classList.contains('modal')) {
       this.hide();

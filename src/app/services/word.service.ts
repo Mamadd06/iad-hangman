@@ -15,7 +15,7 @@ export const LETTERS = [LETTERS_LINE_1, LETTERS_LINE_2, LETTERS_LINE_3, LETTERS_
 @Injectable()
 export class WordService {
 
-  private BASE_URL = 'assets/data/words.json';
+  public BASE_URL = 'assets/data/words.json';
 
   constructor(private http: HttpClient) { }
 
